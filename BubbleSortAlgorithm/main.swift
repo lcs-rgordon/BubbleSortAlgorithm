@@ -26,14 +26,17 @@ print("Unsorted:")
 print(dataSet)
 waitForInput()
 
-// Sort the array
 
 // Loop through the entire array "n" times
 // (however many times there are elements in the array
 for i in 0..<dataSet.count {
 
     // One pass through the array to float the highest number to the end
-    for j in 0..<dataSet.count - 1 {
+    // "i" will equal the number of sorted elements after each pass
+    for j in 0..<dataSet.count - 1 - i {
+        
+        // What comparison is this?
+        print("Pass \(i + 1), comparison \(j + 1)...")
         
         // Compare left value to right value
         if dataSet[j] > dataSet[j + 1] {
@@ -46,7 +49,7 @@ for i in 0..<dataSet.count {
         }
         
     }
-
+    
     // Print the array after "n" passes
     print("Array after pass \(i + 1)")
     print(dataSet)
