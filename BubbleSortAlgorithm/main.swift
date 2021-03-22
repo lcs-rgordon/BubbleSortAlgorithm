@@ -27,9 +27,15 @@ print(dataSet)
 waitForInput()
 
 
+// Keep track of whether numbers were swapped
+var swapped = false
+
 // Loop through the entire array "n" times
 // (however many times there are elements in the array
 for i in 0..<dataSet.count {
+
+    // Set the swapped flag to false
+    swapped = false
 
     // One pass through the array to float the highest number to the end
     // "i" will equal the number of sorted elements after each pass
@@ -46,8 +52,16 @@ for i in 0..<dataSet.count {
             dataSet[j] = dataSet[j + 1]         // Replace left with right
             dataSet[j + 1] = temporaryValue     // Replace right with temporary value
             
+            // A swap occured
+            swapped = true
+            
         }
         
+    }
+    
+    // Stop further passes if there were no swaps
+    if swapped == false {
+        break
     }
     
     // Print the array after "n" passes
