@@ -56,7 +56,7 @@ while start <= end {
     print("Start is: \t\t\(start)")
     print("Middle is: \t\t\(middle)")
     print("End is: \t\t\(end)")
-    print("Target value: \t\t\(target)")
+    print("Target value: \t\(target)")
     print("------")
     print("Index:\t", terminator: "")
     for i in start...end {
