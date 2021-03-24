@@ -28,12 +28,16 @@ print("Sorted:")
 print(dataSet)
 waitForInput()
 
-// Decide on a value to search for
-// This will for sure be in the array
-//let target = dataSet[Int.random(in: 0...dataSet.count - 1)]
+// Decide on a value to search for (four options, uncomment to use)
+
+// 1. Random element within the array
+let target = dataSet[Int.random(in: 0...dataSet.count - 1)]
+// 2. The last element
 //let target = dataSet[dataSet.count - 1]
-let target = dataSet[0]
-//let target = 101
+// 3. The first element
+//let target = dataSet[0]
+// 4. A value guaranteed to be greater than the highest value
+//let target = dataSet[dataSet.count - 1] + 5
 
 // Set the start and end positions
 var start = 0
