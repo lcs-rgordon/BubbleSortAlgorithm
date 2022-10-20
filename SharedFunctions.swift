@@ -35,7 +35,7 @@ func bubbleSort(unsorted dataSet: inout [Int], showPrompts: Bool = true) {
             
             // What comparison is this?
             if showPrompts {
-                print("Pass \(i + 1), comparison \(j + 1)...")
+                print("Pass \(i + 1), comparison \(j + 1)...", terminator: "")
             }
             
             // Compare left value to right value
@@ -48,8 +48,13 @@ func bubbleSort(unsorted dataSet: inout [Int], showPrompts: Bool = true) {
                 
                 // A swap occured
                 swapped = true
+                print(" swap occurred.", terminator: "")
                 
             }
+            
+            // Go to next line for output
+            print("")
+            
             
         }
         
